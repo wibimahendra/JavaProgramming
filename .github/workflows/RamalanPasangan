@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        //deklarasi variabel//
+        String Nama;
+        int Umur, UmurPasangan;
+        String Pasangan;
+        //membuat scanner dan pendahuluan//
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Selamat Datang di Program Ramalan Cupu");
+        System.out.println("############################");
+
+        //input nama dan umur Anda//
+        System.out.println("Data Anda :"); System.out.println("♥♥♥♥♥♥♥♥♥♥♥");
+        System.out.print("Masukkan Nama Anda : "); Nama = keyboard.nextLine();
+        System.out.print("Masukkan Umur Anda : "); Umur = keyboard.nextInt();
+        keyboard.nextLine();
+        //input nama dan umur pasangan//
+        System.out.println("Data Pasangan Anda :"); System.out.println("♥♥♥♥♥♥♥♥♥♥♥");
+        System.out.print("Masukkan Nama Pasangan Anda : "); Pasangan = keyboard.next();
+        System.out.print("Masukkan Umur Pasangan Anda : "); UmurPasangan = keyboard.nextInt();
+        keyboard.nextLine();
+        //show//
+        System.out.println(Nama + " [" + Umur + "] " + "tahun");
+        System.out.println("♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥");
+        System.out.println(Pasangan +" [" + UmurPasangan + "] " + "tahun");
+        System.out.println("Tekan ENTER untuk melihat hasil ramalan");
+        keyboard.nextLine();
+        int min = 50;
+        int max = 100;
+        int random_int = (int)Math.floor(Math.random() * (max - min + 1) + min);
+        System.out.println("Mencocokkan anda dengan pasangan Anda adalah : " + random_int + "%");
+        keyboard.nextLine();
+        System.out.println("Terima Kasih telah menggunakan jasa Ramalan kami");
+    }
+}
